@@ -33,7 +33,7 @@ $creditCardPaulo = $pagarme->getCreditCard('ID_CARTAO_AQUI');
 
 //faz a requisição de pagamento na api da pagarme
 /*
-* @var $amount = 5000 é equivalente a 5 centavos na api
+* @var $amount = 5000 é equivalente a 50,00 na api
 * @var $installments = número de parcelas, valor default é 1
 * @ $async = informa se a transação vai ser do tipo assíncrono or síncrono
 */
