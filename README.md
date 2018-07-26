@@ -1,2 +1,2 @@
 # payments
-APIs de pagamento Pagseguro, Cielo e Pagar.me
+APIs de pagamentos: Pagseguro, Cielo e Pagar.me
