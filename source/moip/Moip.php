@@ -2,7 +2,6 @@
 
 class Moip
 {
-
   private $service;
   private $endPoint;
   private $authorization;
@@ -19,7 +18,7 @@ class Moip
       $this->authorization = ''; // autorização formato - Authorization: Basic BASE64(MOIP_API_TOKEN:MOIP_API_KEY)
     } else {
       $this->service = 'https://sandbox.moip.com.br'; // url de serviço em sandbox
-      $this->authorization = 'Basic QzdWUVpNSE5KVkVDU0ZVR01SVEdRQjJPWTE4UUZITU06RFFPWlpEUUJNOFdERlpIQVFCTFNNQVZFVlBMUlNOTklMQ09XNFpNNA==';
+      $this->authorization = 'Basic (token + key no formato de base64 aqui. Separados por :, ex:base64(token:key))';
     }
 
     $this->headers = [
