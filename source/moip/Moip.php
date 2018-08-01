@@ -1,16 +1,31 @@
 <?php
 
+/**
+* Classe Responsável por manipular transações com a api do moip
+*/
+
 class Moip
 {
+  /* Service Config */
   private $service;
   private $endPoint;
   private $authorization;
 
   /* Atributo responsável por setar valores no header das requisições */
   private $headers;
+
+  /* Params API */
   private $params;
+
+  /* Return and Callback */
   private $callback;
 
+  /**
+  * <b>Construtor</b>: Énecessário fazer instância desse método.
+  * Responsabilidade de setar os parâmetros de autenticação com o WebService
+  * além de definir em qual ambiente a classe irá refletir, (Homologação || Produção)
+  * @param BOOLEANO $live = true para ambiente de produção e false homologação
+  */
   public function __construct($live = true)
   {
     if ($live == true) {
@@ -27,6 +42,9 @@ class Moip
     ];
   }
 
+  /**
+  * <b>createPayment</b>: Cria uma transação de pagamento na api do moip
+  */
   public function createPayment($orderId, $creditCardHash, $statementDescriptor, $method, $cardHolderName, $cardBirth, $documentNumber, $phone)
   {
     $this->endPoint = "/v2/orders/{$orderId}/payments";
