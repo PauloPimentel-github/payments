@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+label{font-size: 0.875em; font-weight: bold; margin-bottom: 5px;}
+h2{margin-bottom: 20px;}
+
+.container{width: 100%; margin-top: 20px;}
+.content {width: 90%; margin: 0 auto;}
